@@ -1,5 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*********************** Utils ***********************/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #E72444;
+}
+
+.border {
+  border: 1px solid #E72444;
+}
+
+.form-group {
+  margin: 8px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  flex: 1;
+  padding: 8px 14px;
+  border: 1px solid #CCC;
+  border-radius: 50px;
+}
+
+.form-control:focus {
+  outline: none;
+  border: 1px solid #e24e66;
+  box-shadow: 0px 0px 0px 2px #f3b9c3;
+}
+
+.error-feedback {
+  color: #E72444;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-left: 12px;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 8px 14px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: #e43f5a;
+  color: #FFF;
+}
+
+.btn--primary:hover {
+  background-color: #df586e;
+}
+
+.btn--block {
+  flex: 1;
+}
+
+.btn--loading {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.btn--outlined {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.btn--round {
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/******************* InlineText Component *******************/
+.inline-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+}
+
+.inline-text__line {
+  border-top: 1px solid #ccc;
+  flex: 1;
+}
+
+.inline-text__content {
+  color: #666;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media(max-width: 768px) {
+  .inline-text__content {
+    font-size: 12px;
+  }
+}
+
+
+/*********************** Login Screen ***********************/
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  background-color: #F5F5F5;
+}
+
+.login__container {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.login__img-container {
+  flex: 1 0 50%;
+  background: url(../public/img/login.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0px 8px 8px 0px;
+}
+
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+  }
+
+  .login__container {
+    flex: 3;
+    justify-content: flex-start;
+    padding: 12px 12px 0 12px;
+  }
+
+  .login__img-container {
+    flex: 2;
+    border-radius: 0px 0px 8px 8px;
+  }
+}
+
+.login__container__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .login__container__title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login__container__title {
+    font-size: 1rem;
+  }
+}
+
+.login__container__form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .login__container__form {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+.login__container__other button {
+  margin: 30px 8px;
+}
+
+@media (max-width: 768px) {
+  .login__container__other button {
+    margin: 14px 8px;
+  }
+}
+
+.login__container__other button i {
+  transform: translateX(-15%);
+}
+
+.login__container__privacy-policy {
+  position: fixed;
+  bottom: 0;
+}
+
+
+.login__container__privacy-policy__content {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .login__container__privacy-policy__content {
+    font-size: 10px;
+  }
 }
